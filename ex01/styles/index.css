@@ -1,0 +1,84 @@
+main {
+  width: 860px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 15px;
+}
+
+img {
+  width: 200px;
+  height: auto;
+  vertical-align: middle;
+}
+
+.black {
+  background-color: #000;
+  opacity: 0;
+  z-index: 1;
+}
+
+.black h1 {
+  color: white;
+  margin: 0%;
+  position: absolute;
+  bottom: 0;
+}
+
+.container {
+  position: relative;
+}
+
+.container .black {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.container:hover .black {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  display: none;
+}
+
+.modal .modal-content-holder {
+  width: 720px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  top: 25px;
+  padding: 10px;
+}
+
+.modal-content-holder span.close {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #fff;
+  line-height: 1;
+  width: 20px;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.objectView {
+  height: 200px;
+  width: 200px;
+}
